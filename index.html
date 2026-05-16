@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hommage à Abdallah Cissé</title>
+    <link rel="stylesheet" href="index.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@900&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+        <a href="#home" class="logo">
+            Abdallah <span>Cissé</span>
+        </a>
+
+        <i class="bx bx-menu" id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#home">Accueil</a>
+            <a href="#about">À sa mémoire</a>
+            <a href="#priere">Prières</a>
+            <a href="#temoignages">Témoignages</a>
+            <a href="https://pay.wave.com/m/788988476" target="_blank" rel="noopener" class="pay-btn wave-pay">
+                <span class="wave-wordmark">wave</span>
+            </a>
+            <a href="#" class="pay-btn om-pay" onclick="openOrangeMoneyModal(); return false;">
+                <span class="om-icon">O</span>
+                <span class="om-words"><b>Orange</b><small>Money</small></span>
+            </a>
+        </nav>
+
+        <button class="gradient-btn" onclick="document.getElementById('laisser-message').scrollIntoView({behavior:'smooth'})">
+            Laisser un message
+        </button>
+    </header>
+
+    <!-- ===== HOME ===== -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>À la mémoire d'<span>Abdallah</span></h1>
+            <h3>Un ami <span>inoubliable</span></h3>
+            <div class="divider"></div>
+            <p>
+                Ce site est un hommage à la vie d'Abdallah Cissé. À travers ces pages,
+                nous partageons nos souvenirs et les moments qui ont marqué nos vies
+                à ses côtés. Il restera à jamais dans nos cœurs.
+            </p>
+            <div class="social-media">
+                <a href="#" aria-label="Facebook"><i class='bx bxl-facebook'></i></a>
+                <a href="#" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+                <a href="https://wa.me/22178898476" target="_blank" aria-label="WhatsApp"><i class='bx bxl-whatsapp'></i></a>
+            </div>
+            <div class="btn-group">
+                <a href="#priere" class="btn">Prières</a>
+                <a href="#about" class="btn btn-outline">À sa mémoire</a>
+            </div>
+        </div>
+
+        <div class="home-img">
+            <img src="whatsapp-image.jpeg" alt="Abdallah Cissé">
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="abdalah1.jpeg" alt="Abdallah">
+        </div>
+        <div class="about-content">
+            <h2>Une âme <span>lumineuse</span></h2>
+            <p>
+                Abdallah était une âme généreuse et lumineuse. En ce lieu, nous prenons un moment
+                pour lui dédier nos pensées et nos prières. Que sa bonté continue de nous inspirer
+                chaque jour et que son souvenir soit une source de paix pour nous tous.
+                Son sourire, sa gentillesse et sa bienveillance envers chacun resteront gravés
+                dans notre mémoire. Il nous a appris que la vie se mesure non en années,
+                mais en actes d'amour et de générosité.
+            </p>
+            <a href="#temoignages" class="btn">Lire les témoignages</a>
+        </div>
+    </section>
+
+    <!-- ===== GALERIE ===== -->
+    <section class="gallery" id="galerie">
+        <h2 class="heading">Galerie (<span>Souvenirs</span>)</h2>
+
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="abdalah3.jpeg" alt="Un beau moment">
+                <div class="gallery-overlay">
+                    <i class='bx bx-zoom-in'></i>
+                    <p>Un beau moment</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="entreamis.jpeg" alt="Entre amis">
+                <div class="gallery-overlay">
+                    <i class='bx bx-zoom-in'></i>
+                    <p>Entre amis</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="souvclas.jpeg" alt="Un souvenir précieux">
+                <div class="gallery-overlay">
+                    <i class='bx bx-zoom-in'></i>
+                    <p>Un souvenir précieux</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="souv3.jpeg" alt="Toujours souriant">
+                <div class="gallery-overlay">
+                    <i class='bx bx-zoom-in'></i>
+                    <p>Toujours souriant</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="souv2.jpeg" alt="Dans nos mémoires">
+                <div class="gallery-overlay">
+                    <i class='bx bx-zoom-in'></i>
+                    <p>Dans nos mémoires</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- LIGHTBOX -->
+        <div class="lightbox" id="lightbox">
+            <button class="lightbox-close" id="lightbox-close"><i class='bx bx-x'></i></button>
+            <button class="lightbox-prev" id="lightbox-prev"><i class='bx bx-chevron-left'></i></button>
+            <img src="" alt="Photo agrandie" id="lightbox-img">
+            <p id="lightbox-caption"></p>
+            <button class="lightbox-next" id="lightbox-next"><i class='bx bx-chevron-right'></i></button>
+        </div>
+    </section>
+
+    <!-- ===== PRIÈRES ===== -->
+    <section class="services" id="priere">
+        <h2 class="heading">Invocations (<span>Douas</span>)</h2>
+
+        <div class="services-container">
+            <div class="service-box">
+                <div class="service-info">
+                    <i class='bx bx-star'></i>
+                    <h4>Istighfar</h4>
+                    <div class="arabic-sep">✦ ✦ ✦</div>
+                    <p><strong>Allahoumma ghfir lahou warhamhou</strong></p>
+                    <p class="translation">"Ô Allah, pardonne-lui et accorde-lui Ta miséricorde."</p>
+                </div>
+            </div>
+            <div class="service-box">
+                <div class="service-info">
+                    <i class='bx bx-moon'></i>
+                    <h4>Doua pour le repos</h4>
+                    <div class="arabic-sep">✦ ✦ ✦</div>
+                    <p><strong>Allahoumma thabbit-hou 'inda-l-mas'alah</strong></p>
+                    <p class="translation">"Ô Allah, affermis-le lors du questionnement."</p>
+                </div>
+            </div>
+            <div class="service-box">
+                <div class="service-info">
+                    <i class='bx bxs-crown'></i>
+                    <h4>Le Paradis</h4>
+                    <div class="arabic-sep">✦ ✦ ✦</div>
+                    <p><strong>Allahoumma dkhilhou-l-jannah</strong></p>
+                    <p class="translation">"Ô Allah, fais-le entrer au Paradis sans jugement."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TÉMOIGNAGES ===== -->
+    <section class="testimonials" id="temoignages">
+        <h2 class="heading">Témoignages (<span>Paroles d'amis</span>)</h2>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p class="testimonial-text">
+                    Abdallah était toujours là quand on avait besoin de lui.
+                    Son rire communicatif et son cœur grand comme le monde
+                    nous manqueront profondément. Que son âme repose en paix.
+                </p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">A</div>
+                    <div>
+                        <div class="testimonial-name">Amadou D.</div>
+                        <div class="testimonial-relation">Ami d'enfance</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">
+                    Je me souviens de chaque moment passé ensemble.
+                    Tu étais bien plus qu'un ami, tu étais un frère.
+                    Innā lillāhi wa innā ilayhi rājiʿūn.
+                </p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">F</div>
+                    <div>
+                        <div class="testimonial-name">Fatou S.</div>
+                        <div class="testimonial-relation">Amie proche</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">
+                    Abdallah avait ce rare don de rendre tout le monde
+                    à l'aise autour de lui. Sa générosité était sans limite.
+                    Qu'Allah lui accorde Sa miséricorde.
+                </p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">M</div>
+                    <div>
+                        <div class="testimonial-name">Moussa B.</div>
+                        <div class="testimonial-relation">Camarade de classe</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FORMULAIRE DE MESSAGE ===== -->
+    <section class="contact" id="laisser-message">
+        <h2 class="heading">Laisser un <span>Message</span></h2>
+
+        <div class="contact-container">
+            <form id="memory-form">
+                <div class="input-group">
+                    <div class="input-box">
+                        <input type="text" id="name" placeholder="Votre nom complet" required>
+                        <input type="text" id="relation" placeholder="Votre lien avec Abdallah" required>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <textarea id="message" cols="30" rows="10" placeholder="Votre message ou souvenir..." required></textarea>
+                </div>
+                <button type="submit" class="btn">Envoyer le message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ===== COLLECTE DE FONDS ===== -->
+    <section class="collecte" id="collecte">
+        <div class="collecte-inner">
+            <div class="collecte-icon">
+                <i class='bx bxs-heart'></i>
+            </div>
+            <h2>Une collecte de fonds est organisée</h2>
+            <p>
+                En mémoire d'<strong>Abdallah Cissé</strong> et d'<strong>Amadou Soumaré</strong>,
+                une collecte est ouverte afin de financer des prières collectives — Khatmoul Quran
+                et repas partagé — qui seront organisées chaque année
+                <strong>le lendemain de la Tabaski</strong> en leur honneur.
+            </p>
+            <p class="collecte-sub">
+                Chaque contribution, petite ou grande, est une <em>Sadaqa Jariya</em> —
+                une aumône continue dont la récompense leur revient, inch'Allah.
+            </p>
+            <div class="collecte-btns">
+                <a href="https://pay.wave.com/m/788988476" target="_blank" rel="noopener" class="pay-btn wave-pay pay-lg">
+                    <span class="wave-wordmark">wave</span>
+                    <span class="pay-label">Contribuer via Wave</span>
+                </a>
+                <a href="#" class="pay-btn om-pay pay-lg" onclick="openOrangeMoneyModal(); return false;">
+                    <span class="om-icon">O</span>
+                    <span class="om-words"><b>Orange</b><small>Money</small></span>
+                    <span class="pay-label">Contribuer via OM</span>
+                </a>
+            </div>
+            <span class="collecte-ayat">
+                « Quand un homme meurt, ses œuvres s'arrêtent, sauf trois : une aumône continue, un savoir dont on profite, ou un enfant pieux qui prie pour lui. »
+                <em>— Hadith</em>
+            </span>
+        </div>
+    </section>
+
+    <!-- ===== MODAL ORANGE MONEY ===== -->
+    <div class="om-modal" id="om-modal">
+        <div class="om-modal-box">
+            <button class="om-modal-close" onclick="closeOrangeMoneyModal()"><i class='bx bx-x'></i></button>
+            <div class="om-modal-logo">
+                <span class="om-icon om-icon-lg">O</span>
+                <span class="om-words om-words-lg"><b>Orange</b><small>Money</small></span>
+            </div>
+            <h3>Envoyer une Sadaqa Jariya</h3>
+            <p>Envoyez votre contribution directement sur ce numéro Orange Money :</p>
+            <div class="om-number">
+                <i class='bx bxs-phone'></i>
+                <span>78 898 84 76</span>
+            </div>
+            <p class="om-instructions">
+                Ouvrez votre app <strong>Orange Money</strong> → <strong>Envoyer de l'argent</strong> → entrez le numéro ci-dessus.
+            </p>
+            <a href="tel:+221788988476" class="btn om-call-btn">
+                <i class='bx bxs-phone-call'></i> Composer le numéro
+            </a>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <p>Ce site a été créé avec amour et respect à la mémoire d'<span>Abdallah Cissé</span>.</p>
+        <p class="dua-footer">"Ô Allah, élève son rang parmi les bien-guidés."</p>
+        <p style="margin-top: 2rem; font-size: 1.3rem;">&copy; 2026 — Hommage à Abdallah Cissé</p>
+    </footer>
+
+    
+
+    <script src="index.js"></script>
+</body>
+</html>
